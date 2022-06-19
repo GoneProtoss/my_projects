@@ -1,0 +1,37 @@
+.game_2048, .game_2048 * {
+  margin: 0;
+  padding: 0;
+}
+
+.game_2048 .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game_2048 .cell {
+  box-sizing: border-box;
+  width: 4rem;
+  height: 4rem;
+  line-height: calc(4rem - 8px);
+  border: 4px solid brown;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: lightgoldenrodyellow;
+  margin: 4px;
+}
+
+.game_2048 .cell_0 {color: gray; font-size: 3em;}
+.game_2048 .cell_2 {color: black; font-size: 3em;}
+.game_2048 .cell_4 {color: blue; font-size: 3em;}
+.game_2048 .cell_8 {color: purple; font-size: 3em;}
+.game_2048 .cell_16 {color: blueviolet; font-size: 2.5em;}
+.game_2048 .cell_32 {color: red; font-size: 2.5em;}
+.game_2048 .cell_64 {color: orange; font-size: 2.5em;}
+.game_2048 .cell_128 {color: darkgoldenrod; font-size: 2em;}
+.game_2048 .cell_256 {color: mediumseagreen; font-size: 2em;}
+.game_2048 .cell_512 {color: green; font-size: 2em;}
+.game_2048 .cell_1024 {color: lightseagreen; font-size: 1.5em;}
+.game_2048 .cell_2048 {color: lightblue; font-size: 1.5em;}
+.game_2048 .cell_4096 {color: lightblue; font-size: 1.5em;}
+.game_2048 .cell_8192 {color: lightblue; font-size: 1.5em;}
