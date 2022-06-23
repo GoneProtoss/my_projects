@@ -1,0 +1,26 @@
+.game_snake {
+  border: 1px solid black;
+  padding: 2em;
+  background-color: black;
+}
+
+.game_snake * {
+  margin: 0;
+  padding: 0;
+}
+
+.game_snake .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game_snake .row .cell {
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+}
+
+.game_snake .row .cell_0 {background-color: white;}
+.game_snake .row .cell_1 {background-color: blue;}
+.game_snake .row .cell_2 {background-color: red;}
