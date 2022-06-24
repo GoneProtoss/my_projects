@@ -1,0 +1,121 @@
+html,body{-moz-user-select: none; -khtml-user-select: none; user-select: none;}
+body {
+    background-color: rgba(192,192,192,1);
+    max-width: 520px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid rgba(128,128,128,1);
+    margin-top: 10px;
+
+}
+.game-name {
+    margin: 10px 0;
+    text-align: center;
+}
+.game-title {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+    .game-title button{
+        cursor: pointer;
+        background-color: rgba(192,192,192,1);
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid rgba(128,128,128,1);
+        border-bottom: 2px solid rgba(128,128,128,1);
+    }
+    .game-title .mousedown {
+        border-top: 2px solid rgba(128,128,128,1);
+        border-left: 2px solid rgba(128,128,128,1);
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    .game-title div {
+        box-sizing: border-box;
+        border-top: 2px solid rgba(128,128,128,1);
+        border-left: 2px solid rgba(128,128,128,1);
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        height: 28px;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 2px;
+        color: red;
+        background-color: #323232;
+        cursor: not-allowed;
+    }
+
+.level-group {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    height: 24px;
+    border-top: 2px solid rgba(128,128,128,1);
+    border-left: 2px solid rgba(128,128,128,1);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    width: 300px;
+    text-align: center;
+}
+    .level-d {
+        height: 20px;
+        line-height: 16px;
+        box-sizing: border-box;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid rgba(128,128,128,1);
+        border-bottom: 2px solid rgba(128,128,128,1);
+        width: 100px;
+        cursor: pointer;
+    }
+    .level-d-active {
+        border-top: 1px solid rgba(128,128,128,1);
+        border-left: 1px solid rgba(128,128,128,1);
+        border-right: none;
+        border-bottom: none;
+    }
+    .level-d:nth-of-type(1) {color:darkgreen;}
+    .level-d:nth-of-type(2) {color:darkblue;}
+    .level-d:nth-of-type(3) {color:darkred;}
+
+
+
+.mine-field {
+    margin: 20px auto;
+    border-top: 3px solid rgba(128,128,128,1);
+    border-left: 3px solid rgba(128,128,128,1);
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.row {
+    display: flex;
+}
+.cell {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.cell-unknown {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid rgba(128,128,128,1);
+    border-bottom: 2px solid rgba(128,128,128,1);
+}
+.cell-unknown:hover {
+    background-color: rgba(222,222,222,1);
+}
+.cell-solved {
+    border-top: 1px solid rgba(128,128,128,1);
+    border-left: 1px solid rgba(128,128,128,1);
+    border-right: none;
+    border-bottom: none;
+}

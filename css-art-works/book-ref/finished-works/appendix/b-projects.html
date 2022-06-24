@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .projects {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            width: 19em;
+            --img: url(projects-pictures/demo-2-8.png);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1em;
+            overflow: hidden;
+            margin: 1em;
+            border: 1px solid #eee;
+        }
+
+        .project .thumbnail {
+            width: 19em;
+            height: 14em;
+            background-image: var(--img);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .project p {
+            margin: 0;
+            width: 100%;
+            text-align: left;
+            line-height: 1.5em;
+            background-color: #666;
+            box-sizing: border-box;
+            color: #eee;
+        }
+
+        .project .name {
+            font-size: 1.3em;
+            padding: 0.2em 1.1em;
+            font-family: sans-serif;
+        }
+
+        .project .chapter {
+            color: #ddd;
+            padding: 0 0 0.4em 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="projects"></div>
+</body>
+<script>
+    let projects = [
+        {
+            img: 'demo-2-8.png',
+            name: '蒸锅',
+            chapter: '第2章 2.4.1节',
+        },
+        {
+            img: 'demo-2-9.png',
+            name: '怪兽',
+            chapter: '第2章 2.4.2节',
+        },
+        {
+            img: 'demo-3-20.jpg',
+            name: '铅笔',
+            chapter: '第3章 3.4.1节',
+        },
+        {
+            img: 'demo-3-21.jpg',
+            name: '宇宙飞船',
+            chapter: '第3章 3.4.2节',
+        },
+        {
+            img: 'demo-4-15.png',
+            name: '熊猫',
+            chapter: '第4章 4.4.1节',
+        },
+        {
+            img: 'demo-4-16.png',
+            name: '雷达扫描',
+            chapter: '第4章 4.4.2节',
+        },
+        {
+            img: 'demo-5-10.png',
+            name: '日历',
+            chapter: '第5章 5.3.1节',
+        },
+        {
+            img: 'demo-5-11.png',
+            name: '飞机舷窗',
+            chapter: '第5章 5.3.2节',
+        },
+        {
+            img: 'demo-6-19.png',
+            name: '莲花',
+            chapter: '第6章 6.4.1节',
+        },
+        {
+            img: 'demo-6-20.png',
+            name: '彭罗斯三角形',
+            chapter: '第6章 6.4.2节',
+        },
+        {
+            img: 'demo-7-14.png',
+            name: '监控眼',
+            chapter: '第7章 7.3.1节',
+        },
+        {
+            img: 'demo-7-15.png',
+            name: '纸鹤',
+            chapter: '第7章 7.3.2节',
+        },
+        {
+            img: 'demo-8-20.png',
+            name: '炫彩旋臂',
+            chapter: '第8章 8.4.1节',
+        },
+        {
+            img: 'demo-8-21.png',
+            name: '两只鹦鹉',
+            chapter: '第8章 8.4.2节',
+        },
+        {
+            img: 'demo-9-11.png',
+            name: '彩虹',
+            chapter: '第9章 9.5.1节',
+        },
+        {
+            img: 'demo-9-12.png',
+            name: '两颗爱心',
+            chapter: '第9章 9.5.2节',
+        },
+        {
+            img: 'demo-10-24.png',
+            name: '乒乓球对打',
+            chapter: '第10章 10.4.1节',
+        },
+        {
+            img: 'demo-10-25.png',
+            name: '徘徊的果冻怪兽',
+            chapter: '第10章 10.4.2节',
+        },
+        {
+            img: 'demo-11-1.png',
+            name: '盘式蚊香',
+            chapter: '第11章 11.1节',
+        },
+        {
+            img: 'demo-11-2.png',
+            name: '热气球',
+            chapter: '第11章 11.2节',
+        },
+        {
+            img: 'demo-11-3.png',
+            name: '笔记本电脑',
+            chapter: '第11章 11.3节',
+        },
+        {
+            img: 'demo-11-4.png',
+            name: '卓别林形象',
+            chapter: '第11章 11.4节',
+        },
+        {
+            img: 'demo-12-1.png',
+            name: '海浪',
+            chapter: '第12章 12.1节',
+        },
+        {
+            img: 'demo-12-2.png',
+            name: '天体运转模型',
+            chapter: '第12章 12.2节',
+        },
+        {
+            img: 'demo-12-3.png',
+            name: '队列变色旋转动画',
+            chapter: '第12章 12.3节',
+        },
+        {
+            img: 'demo-12-4.png',
+            name: '咖啡馆墙壁错觉动画',
+            chapter: '第12章 12.4节',
+        },
+        {
+            img: 'demo-13-1.png',
+            name: '撕纸文字',
+            chapter: '第13章 13.1节',
+        },
+        {
+            img: 'demo-13-2.png',
+            name: '牛奶文字',
+            chapter: '第13章 13.2节',
+        },
+        {
+            img: 'demo-13-3.png',
+            name: '闪光的霓虹文字',
+            chapter: '第13章 13.3节',
+        },
+        {
+            img: 'demo-13-4.png',
+            name: '阶梯文字',
+            chapter: '第13章 13.4节',
+        },
+    ]
+
+    projects.forEach(p => appendProject(p))
+
+    function appendProject(project) {
+        let $project = document.createElement('div')
+        $project.className = 'project'
+        $project.style.setProperty('--img', `url(projects-pictures/${project.img})`)
+
+        let $thumbnail = document.createElement('div')
+        $thumbnail.className = 'thumbnail'
+
+        let $name = document.createElement('p')
+        $name.className = 'name'
+        $name.innerText = project.name
+
+        let $chapter = document.createElement('p')
+        $chapter.className = 'chapter'
+        $chapter.innerText = project.chapter
+
+        // let $codePath = document.createElement('p')
+        // $codePath.className = 'code-path'
+        // $codePath.innerText = project.codePath
+
+        $project.appendChild($thumbnail)
+        $project.appendChild($name)
+        $project.appendChild($chapter)
+        // $project.appendChild($codePath)
+
+        document.querySelector('.projects').appendChild($project)
+    }
+</script>
+</html>

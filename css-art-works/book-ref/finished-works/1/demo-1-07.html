@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-7').render()</script>
+    <style>
+        .triangle {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .triangle div {
+            height: 50px;
+            margin: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .triangle div span {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: lightgreen;
+            border-radius: 50%;
+        }
+
+        .triangle div span:first-child,
+        .triangle div span:last-child {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <figure class="triangle">
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </figure>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('10-22').render()</script>
+    <style>
+        body {
+            margin: 2em;
+            display: flex;
+            background-color: black;
+        }
+
+        .equalizer {
+            width: 10em;
+            height: 10em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .equalizer div {
+            width: 1.5em;
+            background: linear-gradient(red, yellow, green);
+        }
+
+        .equalizer div {
+            animation: up-and-down 2s linear infinite;
+            animation-delay: calc(-1 * 0.4s * var(--n));
+        }
+
+        @keyframes up-and-down{
+            0%, 100% { clip-path: inset(27% 0 0 0); }
+            10% { clip-path: inset(17% 0 0 0); }
+            20% { clip-path: inset(55% 0 0 0); }
+            30% { clip-path: inset(30% 0 0 0); }
+            40% { clip-path: inset(13% 0 0 0); }
+            50% { clip-path: inset(38% 0 0 0); }
+            60% { clip-path: inset(80% 0 0 0); }
+            70% { clip-path: inset(21% 0 0 0); }
+            80% { clip-path: inset(0% 0 0 0); }
+            90% { clip-path: inset(36% 0 0 0); }
+        }
+
+        .equalizer div:nth-child(1) { --n: 1; }
+        .equalizer div:nth-child(2) { --n: 2; }
+        .equalizer div:nth-child(3) { --n: 3; }
+        .equalizer div:nth-child(4) { --n: 4; }
+        .equalizer div:nth-child(5) { --n: 5; }
+    </style>
+</head>
+<body>
+    <figure class="equalizer">
+		<div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+</body>
+</html>

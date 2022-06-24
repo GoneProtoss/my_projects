@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <script src="../common/note.js"></script>
+    <script>new Note('10-3').render()</script>
+    <style>
+        .container .ball {
+            font-size: 30px;
+            animation: shift 1s linear infinite alternate;
+        }
+
+        .container:nth-child(1) .ball {animation-delay: 0s;}
+        .container:nth-child(2) .ball {animation-delay: -0.1s;}
+        .container:nth-child(3) .ball {animation-delay: -0.2s;}
+        .container:nth-child(4) .ball {animation-delay: -0.3s;}
+        .container:nth-child(5) .ball {animation-delay: -0.4s;}
+
+        @keyframes shift {
+            to {
+                transform: translateX(6em);
+            }
+        }
+    </style>
+</head>
+<body>
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+</body>
+</html>

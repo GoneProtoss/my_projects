@@ -1,0 +1,291 @@
+.box {
+    font-size: 10px;
+    width: 20em;
+    height: 15em;
+    border: 0.2em solid black;
+    border-radius: 1em;
+    margin: 4em auto;
+}
+
+
+
+/* two length params, [x-off-set, y-off-set] */
+.two-length-param {
+    box-shadow: 1em 1em gray;
+}
+
+
+
+/* three length params, [x-off-set, y-off-set, blurry] */
+.three-length-param {
+    box-shadow: 1em 1em 1em gray;
+}
+
+
+
+/* four length params, [x-off-set, y-off-set, blurry, expansion] */
+.four-length-param {
+    box-shadow: 0 0 1.5em 1.5em gray;
+}
+
+
+
+/* inset two length params, [x-off-set, y-off-set] */
+.inset-two-length-param {
+    box-shadow: inset 0.5em 0.5em hsla(0, 0%, 0%, 0.2);
+}
+
+
+
+/* inset three length params, [x-off-set, y-off-set, blurry] */
+.inset-three-length-param {
+    box-shadow: inset 0.2em 0.2em 0.5em  hsla(0, 0%, 0%, 0.2);
+}
+
+
+
+/* inset four length params, [x-off-set, y-off-set, blurry, expansion] */
+.inset-four-length-param {
+    box-shadow: inset 0 0 0.5em 0.5em  hsla(0, 0%, 0%, 0.2);
+}
+
+
+
+/* multi shadow */
+.multi-shadow-wood {
+    background-color: lightyellow;
+    border: 2em solid burlywood;
+    box-shadow:
+        inset 0.4em 0.4em 0.1em 0.5em hsla(0, 0%, 0%, 0.4),
+        0 0.3em 2em 0.4em hsla(0, 0%, 0%, 0.3);
+}
+
+
+
+/* triple shadow */
+.triple-shadow {
+    font-size: 10px;
+    margin: 4em auto;
+    height: 8em;
+    width: 8em;
+    background-color: #eee;
+    box-shadow:
+        0 0 0 0.5em hsla(19, 56%, 40%, 0.8),
+        0 0 0 0.8em hsla(48, 100%, 93%, 0.8),
+        0 0 1em 1em hsla(19, 56%, 40%, 0.8);
+}
+
+
+
+/* copy self shadow */
+.copy-self-shadow {
+    font-size: 10px;
+    margin: 4em auto;
+    height: 1em;
+    width: 1em;
+    color: orange;
+    border-radius: 50%;
+    border: 1px dashed black;
+    box-shadow:
+        1.1em 0,
+        0 1.1em,
+        1.1em 1.1em,
+        2.2em 1.1em,
+        1.1em 2.2em;
+}
+
+
+
+/* copy self shadow 0 */
+.copy-self-shadow-0 {
+    font-size: 10px;
+    margin: 4em auto;
+    height: 1em;
+    width: 1em;
+    color: orange;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow:
+        0 -1.1em 0 -0.1em tomato,
+        -1.1em 0 0 0.2em gold,
+        1.1em 0 0 0.2em gold,
+        0 1.1em 0 0.1em;
+}
+
+
+
+/* drop shadow */
+.drop-shadow {
+    font-size: 10px;
+    margin: 4em auto;
+    box-sizing: border-box;
+    width: 20em;
+    height: 22em;
+    color: orange;
+    border: 3em solid;
+    border-radius: 50%;
+    position: relative;
+    filter: drop-shadow(21em 0);
+}
+.drop-shadow::before {
+    content: '';
+    position: absolute;
+    width: 10em;
+    height: 5em;
+    top: 11em;
+    left: 9em;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+
+
+/* calendar */
+.calendar-box {
+    font-size: 10px;
+    margin: 4em auto;
+    height: 48em;
+    width: 80em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: seagreen;
+}
+.calendar {
+    width: 28em;
+    height: 28em;
+    background-image: linear-gradient(coral 30%, white 30%);
+    box-sizing: border-box;
+    border: 1em solid darkslategray;
+    border-radius: 2em;
+    position: relative;
+    transform: rotate(15deg);
+}
+.calendar::before {
+    content: '';
+    position: absolute;
+    width: 3em;
+    height: 4em;
+    color: sandybrown;
+    background-color: currentColor;
+    top: -2em;
+    left: 4em;
+    border-radius: 100% 100% 50% 50%;
+    box-shadow:
+        0 0 0 1em darkslategray,
+        15em 0,
+        15em 0 0 1em darkslategray;
+}
+.calendar::after {
+    content: '';
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    color: silver;
+    background-color: currentColor;
+    top: 10em;
+    left: 4em;
+    border-radius: 0.4em;
+    box-shadow:
+        0 0,    5em 0,    10em 0,    15em 0,
+        0 5em,  5em 5em,  10em 5em,  15em 5em,
+        0 10em, 5em 10em, 10em 10em, 15em 10em;
+}
+
+
+
+/* plane window */
+.plane-window-box {
+    font-size: 10px;
+    margin: 4em auto;
+    height: 48em;
+    width: 80em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+}
+.plane-window {
+    width: 25em;
+    height: 35em;
+    background-color: gainsboro;
+    border-radius: 5em;
+    box-shadow:
+        inset 0 0   8em       hsla(0, 0%, 0%, 0.2),
+              0 0   0   0.4em gray,
+              0 0   0   4em   whitesmoke,
+              0 0   0   4.4em gray,
+              0 2em 4em 4em   hsla(0, 0%, 0%, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+.plane-window .curtain {
+    position: absolute;
+    width: inherit;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 5em;
+    box-shadow:
+        0 0 0   0.4em gray,
+        0 0 3em       hsla(0, 0%, 0%, 0.4);
+    top: -20%;
+    z-index: 1;
+}
+.plane-window .curtain::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 0.8em;
+    background-color: gray;
+    border-radius: 0.4em;
+    left: calc((100% - 40%)/2);
+    bottom: 1.6em;
+}
+.plane-window .outside {
+    width: 20em;
+    height: 30em;
+    background-color: deepskyblue;
+    position: relative;
+    left: calc((100% - 20em)/2);
+    top: calc((100% - 30em)/2);
+    border-radius: 7em;
+    box-sizing: border-box;
+    border: 0.4em solid gray;
+    overflow: hidden;
+}
+.outside .cloud {
+    position: absolute;
+    width: 10em;
+    height: 4em;
+    color: white;
+    background-color: currentColor;
+    top: 20%;
+    border-radius: 4em;
+}
+.outside .cloud::before,
+.outside .cloud::after {
+    content: '';
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+.outside .cloud::before {
+    top: -2em;
+    left: 2em;
+}
+.outside .cloud::after {
+    top: -1em;
+    right: 1em;
+}
+.outside .cloud,
+.outside .cloud::before,
+.outside .cloud::after {
+    box-shadow:
+            14em 6em,
+            6em 15em;
+}

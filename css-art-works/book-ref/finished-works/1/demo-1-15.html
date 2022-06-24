@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-15').render()</script>
+    <style>
+        .hashtag {
+            font-size: 30px;
+            width: 10em;
+            height: 10em;
+            position: relative;
+        }
+
+        .hashtag div {
+            position: absolute;
+        }
+
+        .hashtag div:nth-child(odd) {
+            width: 20%;
+            height: 100%;
+        }
+        
+        .hashtag div:nth-child(even) {
+            width: 100%;
+            height: 20%;
+        }
+
+        .hashtag div:nth-child(1) { left: 10%; }
+        .hashtag div:nth-child(2) { top: 10%; }
+        .hashtag div:nth-child(3) { right: 10%; }
+        .hashtag div:nth-child(4) { bottom: 10%; }
+        
+        .hashtag div:nth-child(1) { background-color: hsl(197, 71%, 73%, 0.8); }
+        .hashtag div:nth-child(2) { background-color: hsl(300, 47%, 75%, 0.8); }
+        .hashtag div:nth-child(3) { background-color: hsl(0, 79%, 72%, 0.8); }
+        .hashtag div:nth-child(4) { background-color: hsl(28, 100%, 86%, 0.8); }
+    </style>
+</head>
+<body>
+    <figure class="hashtag">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+</body>
+</html>

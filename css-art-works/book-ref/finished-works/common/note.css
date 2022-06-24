@@ -1,0 +1,49 @@
+.note {
+    width: 90%;
+    height: 10em;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    background-color: burlywood;
+    border-radius: 3em 3em 0 0;
+    display: flex;
+    box-shadow: 0 0 1em 0.2em hsla(0, 0%, 0%, 0.3);
+}
+
+.note .meta {
+    height: 100%;
+    width: 10em;
+    background-color: sienna;
+    color: white;
+    border-radius: 3em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.note .meta h2 {
+    border-bottom: 1px solid white;
+    margin: 0;
+}
+
+.note .chapter {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.note .meta .chapter .number {
+    display: block;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.note .description {
+    width: 100%;
+    padding: 1em 2em 1em 1em;
+    overflow: auto;
+}
+
+.note .description p {
+    margin: 0.5em 0;
+}

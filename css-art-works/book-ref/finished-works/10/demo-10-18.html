@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <script src="../common/note.js"></script>
+    <script>new Note('10-18').render()</script>
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .container .ball {
+            font-size: 30px;
+            animation: shift 4s linear infinite;
+        }
+
+        @keyframes shift {
+            0% {transform: translateX(-3em);}
+            12.5% {transform: translateX(0);}
+            50%, 100% {transform: translateX(9em);}
+        }
+    </style>
+</head>
+<body>
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+</body>
+</html>

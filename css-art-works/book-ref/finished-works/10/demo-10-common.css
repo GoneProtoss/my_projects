@@ -1,0 +1,14 @@
+.container {
+    font-size: 30px;
+    width: 9em;
+    height: 3em;
+    border: 0.3em solid silver;
+    border-radius: 2em;
+}
+
+.container .ball {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: dodgerblue;
+}
