@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('10-21').render()</script>
+	<style>
+		body {
+            margin: 0;
+            overflow: hidden;
+		}
+
+		.sky {
+			width: 100vw;
+			height: 100vh;
+			background-color: #555;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+        
+        .sun,
+        .moon {
+            position: absolute;
+            width: 50vmin;
+            height: 50vmin;
+            border-radius: 50%;
+        }
+
+        .sun {background-color: gold;}
+        .moon {background-color: slategray;}
+
+        .sky,
+        .sun,
+        .moon {
+            animation: 10s linear infinite;
+        }
+
+        .sky {animation-name: to-black;}
+        .sun {animation-name: animate-sun;}
+        .moon {animation-name: animate-moon, to-black;}
+
+        @keyframes to-black {
+            50% {
+                background-color: black;
+            }
+        }
+
+        @keyframes animate-sun {
+            50% {
+                box-shadow: 0 0 5em 1em white;
+            }
+        }
+
+        @keyframes animate-moon {
+            from {
+                transform: translateX(-100vmin);
+            }
+            
+            to {
+                transform: translateX(100vmin);
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class="sky">
+        <div class="sun"></div>
+		<div class="moon"></div>
+	</div>
+</body>
+</html>

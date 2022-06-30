@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-12').render()</script>
+    <style>
+        .magnifier {
+            position: relative;
+            color: dodgerblue;
+        }
+
+        .lens {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 10px solid;
+            border-radius: 50%;
+        }
+
+        .handle {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            border-radius: 0 0 10px 10px;
+            background-color: currentColor;
+            left: 100px;
+            top: 100px;
+            transform: rotate(-45deg);
+            transform-origin: top;
+        }
+    </style>
+</head>
+<body>
+    <figure class="magnifier">
+        <div class="lens"></div>
+        <div class="handle"></div>
+    </figure>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-25').render()</script>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container div,
+        .container div::before,
+        .container div::after {
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+        }
+
+        .container div {
+            font-size: 10px;
+            margin: 4em;
+            position: relative;
+            background-color: lightgreen;
+        }
+
+        .container div::before,
+        .container div::after {
+            content: '';
+            position: absolute;
+            top: 5em;
+        }
+
+        .container div::before { background-color: moccasin; }
+        .container div::after { background-color: orange; }
+
+        .container div::before { right: 3em; }
+        .container div::after { left: 3em; }
+
+        .container div:nth-child(2) {z-index: auto;}
+        .container div:nth-child(2)::before {z-index: -1;}
+        .container div:nth-child(2)::after {z-index: -2;}
+
+        .container div:nth-child(3) {z-index: 1;}
+        .container div:nth-child(3)::before {z-index: -1;}
+        .container div:nth-child(3)::after {z-index: -2;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

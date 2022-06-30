@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            width: 600px;
+            border: 1px solid silver;
+            padding: 1em;
+            margin: 1em;
+        }
+        
+        p {
+            font-size: 1.5em;
+            color: dimgray;
+            padding: 0 0 0.5em 1em;
+            line-height: 1em;
+            margin: 0;
+            width: 40%;
+            border-bottom: 1px solid silver;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            height: 3em;
+            margin: 2em 0;
+            --color: lightgreen;
+            background-color: var(--color);
+            width: 250px;
+            position: relative;
+        }
+
+        div::before {
+            content: attr(data-name);
+            left: 250px;
+            width: 225px;
+        }
+
+        div::after {
+            content: attr(data-cn-name);
+            left: 475px;
+            width: 125px;
+        }
+
+        div::before,
+        div::after {
+            position: absolute;
+            text-align: center;
+            line-height: 2em;
+            font-size: 1.2em;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="red-colors">
+        <p>红色系</p>
+    </section>
+    <section class="pink-colors">
+        <p>粉色系</p>
+    </section>
+    <section class="orange-colors">
+        <p>橙色系</p>
+    </section>
+    <section class="yellow-colors">
+        <p>黄色系</p>
+    </section>
+    <section class="purple-colors">
+        <p>紫色系</p>
+    </section>
+    <section class="green-colors">
+        <p>绿色系</p>
+    </section>
+    <section class="blue-colors">
+        <p>蓝色系</p>
+    </section>
+    <section class="brown-colors">
+        <p>棕色系</p>
+    </section>
+    <section class="white-colors">
+        <p>白色系</p>
+    </section>
+    <section class="gray-colors">
+        <p>灰色系</p>
+    </section>
+    <script>
+        let colors = {
+            red: {
+                name: ['indianred','lightcoral','salmon','darksalmon','lightsalmon','crimson','red','firebrick','darkred'],
+                cnName: ['印地安红','浅珊瑚红','三文鱼','深橙红','橙红','赤红','红色','耐火砖','深红']
+            },
+            pink: {
+                name: ['pink','lightpink','hotpink','deeppink','mediumvioletred','palevioletred'],
+                cnName: ['粉','浅粉红','亮粉色','深粉红','暗紫','浅紫红']
+            },
+            orange: {
+                name: ['lightsalmon','coral','tomato','orangered','darkorange','orange'],
+                cnName: ['橙红','珊瑚','番茄','橙红色','深橙色','橙色']
+            },
+            yellow: {
+                name: ['gold','yellow','lightyellow','lemonchiffon','lightgoldenrodyellow','papayawhip','moccasin','peachpuff','palegoldenrod','khaki','darkkhaki'],
+                cnName: ['金','黄色','浅黄色','粉黄','浅金黄','粉木瓜橙','鹿皮','粉桃红','淡金黄','黄褐色','深卡其色']
+            },
+            purple: {
+                name: ['lavender','thistle','plum','violet','orchid','fuchsia','magenta','mediumorchid','mediumpurple','rebeccapurple','blueviolet','darkviolet','darkorchid','darkmagenta','purple','indigo','slateblue','darkslateblue','mediumslateblue'],
+                cnName: ['薰衣草','蓟草','李子','紫色','兰花','紫红色','品红','暗兰花','暗紫','丽贝卡紫','紫罗兰色','深紫','深兰花紫','深洋红','紫色','靛青','青蓝','深青蓝','亮青蓝']
+            },
+            green: {
+                name: ['greenyellow','chartreuse','lawngreen','lime','limegreen','palegreen','lightgreen','mediumspringgreen','springgreen','mediumseagreen','seagreen','forestgreen','green','darkgreen','yellowgreen','olivedrab','olive','darkolivegreen','mediumaquamarine','darkseagreen','lightseagreen','darkcyan','teal'],
+                cnName: ['绿黄色','查特酒绿','草绿','酸橙','暗绿','淡绿','浅绿','中青绿','嫩绿','暗海藻','海绿色','森林绿','绿色','深绿色','黄绿色','淡绿褐','橄榄','深橄榄绿','草绿','深海绿','浅海绿','深青绿','水鸭']
+            },
+            blue: {
+                name: ['aqua','cyan','lightcyan','paleturquoise','aquamarine','turquoise','mediumturquoise','darkturquoise','cadetblue','steelblue','lightsteelblue','powderblue','lightblue','skyblue','lightskyblue','deepskyblue','dodgerblue','cornflowerblue','mediumslateblue','royalblue','blue','mediumblue','darkblue','navy','midnightblue'],
+                cnName: ['水蓝','青色','浅青绿','淡蓝绿','蓝晶','绿松石','粉蓝','深粉蓝','藏青','钢青','浅钢','粉蓝色','浅蓝','天蓝色','浅天蓝','深天蓝','宝蓝','矢菊花','青蓝','品蓝','蓝色','暗蓝','深蓝','海军','黑蓝']
+            },
+            brown: {
+                name: ['cornsilk','blanchedalmond','bisque','navajowhite','wheat','burlywood','tan','rosybrown','sandybrown','goldenrod','darkgoldenrod','peru','chocolate','saddlebrown','sienna','brown','maroon'],
+                cnName: ['玉米穗黄','杏仁白','浓汤','印地安','小麦','原木色','黄褐色','玫瑰褐','黄褐','黄花','深金黄','秘鲁','巧克力','鞍褐','黄土','棕色','栗色']
+            },
+            white: {
+                name: ['white','snow','honeydew','mintcream','azure','aliceblue','ghostwhite','whitesmoke','seashell','beige','oldlace','floralwhite','ivory','antiquewhite','linen','lavenderblush','mistyrose'],
+                cnName: ['白色','雪','甘露','薄荷乳白','地中海蓝','艾莉斯蓝','幽灵白','白色的烟','贝壳','米色','旧布黄','花白','象牙','古董白','麻布','淡紫','粉玫瑰红']
+            },
+            gray: {
+                name: ['gainsboro','lightgray','silver','darkgray','gray','dimgray','lightslategray','slategray','darkslategray','black'],
+                cnName: ['亮灰','浅灰','银','深灰色','灰色','暗灰','浅青灰','青灰','深青灰','黑色']
+            }
+        }
+
+        function render(colorName) {
+            let section = document.querySelector(`.${colorName}-colors`)
+            let c =  colors[colorName]
+            c.name.forEach((color, i) => {
+                let div = document.createElement('div')
+                div.style.setProperty('--color', color)
+                div.setAttribute('data-name', color)
+                div.setAttribute('data-cn-name', c.cnName[i])
+                section.appendChild(div)
+            })
+        }
+
+        Object.keys(colors).forEach(key => render(key))
+    </script>
+</body>
+</html>

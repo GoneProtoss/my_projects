@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <script src="../common/note.js"></script>
+    <script>new Note('10-10').render()</script>
+    <style>
+        .container {
+            border-color: silver dodgerblue silver hotpink;
+        }
+
+        .container .ball {
+            font-size: 30px;
+            animation:
+                shift 1s linear infinite alternate,
+                change-color 2s linear infinite;
+        }
+
+        @keyframes shift {
+            to {
+                transform: translateX(6em);
+            }
+        }
+
+        @keyframes change-color {
+            55% {
+                background-color: dodgerblue;
+            }
+
+            5%, 50% {
+                background-color: hotpink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+</body>
+</html>

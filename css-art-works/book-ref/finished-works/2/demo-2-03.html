@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: slategray;
+			display: flex;
+			margin: 10em;
+		}
+
+		p {
+			font-size: 50px;
+			width: 5.6em;
+			color: whitesmoke;
+			font-family: sans-serif;
+			font-weight: bold;
+			position: relative;
+			padding: 0.6em 0.4em;
+		}
+
+		p::before,
+		p::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0.2em solid orange;
+			box-sizing: border-box;
+			transform: rotate(45deg);
+			box-shadow: 0.3em 0.3em 0.3em hsl(0, 0%, 35%, 0.8);
+		}
+
+		p:nth-child(2)::before { border-style: solid solid none none; }
+		p:nth-child(2)::after { border-style: none none solid solid; }
+
+		p:nth-child(2)::before {
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<p>ERROR 404</p>
+	<p>ERROR 404</p>
+</body>
+</html>

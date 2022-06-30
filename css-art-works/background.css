@@ -1,0 +1,397 @@
+.common {
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+/* cloud */
+.cloud-box {
+    background-color: skyblue;
+    padding: 1em 0;
+}
+.cloud {
+    width: 2em;
+    height: 2em;
+    margin: 0 auto;
+    font-size: 50px;
+    color: whitesmoke;
+    background: currentColor;
+    border-radius: 100% 100% 0 0;
+    position: relative;
+}
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+    bottom: 0;
+}
+.cloud::before {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 100% 100% 0 100%;
+    left: -30%;
+}
+.cloud::after {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100% 100% 100% 0;
+    right: -30%;
+}
+
+
+
+/* css3 logo */
+.css3 {
+    width: 500px;
+    height: 375px;
+    background-image:
+        url('./book-ref/finished-works/4/css3.png'),
+        url('./book-ref/finished-works/4/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+/* background position demo */
+.bg-pos {
+    width: 500px;
+    height: 400px;
+    background-color: pink;
+    background-image:
+            url("./book-ref/finished-works/4/fruit-mango.png"),
+            url("./book-ref/finished-works/4/fruit-strawberry.png"),
+            url("./book-ref/finished-works/4/fruit-banana.png");
+    background-position: center, top left, 350px 250px;
+    background-repeat: no-repeat;
+}
+
+
+
+/* background size demo */
+.bg-size {
+    width: 500px;
+    height: 400px;
+    background-color: pink;
+    background-image:
+            url("./book-ref/finished-works/4/fruit-mango.png"),
+            url("./book-ref/finished-works/4/fruit-strawberry.png"),
+            url("./book-ref/finished-works/4/fruit-banana.png");
+    background-position: center, top left, 350px 250px;
+    background-size: 30%, 5em, 100px;
+    background-repeat: no-repeat;
+}
+
+
+
+/* background repeat demo */
+.bg-repeat {
+    position: relative;
+    font-size: 10px;
+    width: 90em;
+    height: 12em;
+    background: linear-gradient(peru 45%, sandybrown 45%);
+}
+.bg-repeat::before,
+.bg-repeat::after {
+    content: '';
+    position: absolute;
+    height: inherit;
+    background-image: linear-gradient(to right, darkslategray 1em, transparent 1em);
+    background-repeat: repeat-x;
+}
+.bg-repeat::before {
+    background-size: 8em 4em;
+    left: 2em;
+    width: 88em;
+}
+.bg-repeat::after {
+    background-size: 8em 2em;
+    left: 6em;
+    width: 84em;
+}
+
+
+
+/* background linear-gradient demo */
+.bg-lg {
+    font-size: 10px;
+    width: 90em;
+    height: 12em;
+    background-image: linear-gradient(
+        to right,
+        orangered,
+        orange,
+        gold,
+        lightgreen,
+        cyan
+    );
+}
+
+
+
+/* background linear-gradient position demo */
+.bg-lg-pos {
+    font-size: 10px;
+    width: 90em;
+    height: 12em;
+    background-image: linear-gradient(
+        to right,
+        orangered 0%,
+        orange 10%,
+        gold 20%,
+        lightgreen 30%,
+        cyan 40%
+    );
+}
+
+
+
+/* background linear-gradient position sharp demo */
+.bg-lg-pos-sharp {
+    font-size: 10px;
+    width: 90em;
+    height: 12em;
+    background-image: linear-gradient(
+        to right,
+        orangered 10%,
+        orange 10%, orange 20%,
+        gold 20%, gold 30%,
+        lightgreen 30%, lightgreen 40%,
+        cyan 40%
+    );
+}
+
+
+
+/* background linear-gradient angle demo */
+.bg-lg-angle {
+    font-size: 10px;
+    width: 45em;
+    height: 24em;
+    background-image: linear-gradient(
+        45deg,
+        orangered,
+        orange,
+        gold,
+        lightgreen,
+        cyan
+    );
+}
+
+
+
+/* background linear-gradient transparent demo */
+.bg-lg-angle {
+    font-size: 10px;
+    width: 32em;
+    height: 0.5em;
+    background-image: linear-gradient(
+        to right,
+        black 0, black 4em,
+        transparent 4em, transparent 5em,
+        black 5em, black 7em,
+        transparent 7em, transparent 8em
+    );
+    background-size: 8em;
+}
+
+
+
+/* background radial-gradient demo */
+.bg-rg {
+    font-size: 10px;
+    width: 36em;
+    height: 36em;
+    background-image: radial-gradient(
+        orangered,
+        orange,
+        gold,
+        lightgreen,
+        cyan
+    );
+}
+
+
+
+/* background radial-gradient sharp demo */
+.bg-rg-sharp {
+    font-size: 10px;
+    width: 36em;
+    height: 36em;
+    background-image: radial-gradient(
+        orangered 15%,
+        orange 15%, orange 30%,
+        gold 30%, gold 45%,
+        lightgreen 45%, lightgreen 60%,
+        cyan 60%
+    );
+}
+
+
+
+/* background radial-gradient ellipse demo */
+.bg-rg-ellipse {
+    font-size: 10px;
+    width: 36em;
+    height: 24em;
+    background-image: radial-gradient(
+        orangered 15%,
+        orange 15%, orange 30%,
+        gold 30%, gold 45%,
+        lightgreen 45%, lightgreen 60%,
+        cyan 60%
+    );
+}
+
+
+
+/* background radial-gradient circle demo */
+.bg-rg-circle {
+    font-size: 10px;
+    width: 36em;
+    height: 24em;
+    background-image: radial-gradient(
+        circle,
+        orangered 15%,
+        orange 15%, orange 30%,
+        gold 30%, gold 45%,
+        lightgreen 45%, lightgreen 60%,
+        cyan 60%
+    );
+}
+
+
+
+/* background radial-gradient transparent demo */
+.bg-rg-transparent {
+    font-size: 10px;
+    width: 36em;
+    height: 36em;
+    background-color: black;
+    margin: 20px auto;
+    border-radius: 50%;
+    background-image: repeating-radial-gradient(
+        transparent 0,
+        transparent 2.7em,
+        darkgreen 2.7em,
+        darkgreen 3em
+    );
+}
+
+
+
+/* panda */
+.panda-box {
+    background-color: #3eb3ab;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panda {
+    width: 21em;
+    height: 16em;
+    background-color: white;
+    border: 0.5em solid #333;
+    border-radius: 11em 11em 11em 11em/11em 11em 6em 6em;
+    position: relative;
+    background-image:
+        radial-gradient(ellipse at 50% 60%, #333 1.2em, transparent 1.2em),
+        radial-gradient(ellipse at 50% 80%, #333 0.6em, transparent 0.6em);
+    border-bottom-width: 1em;
+    box-shadow: inset 1em -1em 0 #eee;
+}
+.panda::before {
+    content: '';
+    position: absolute;
+    width: 7em;
+    height: 4em;
+    background-color: #333;
+    top: 5.5em;
+    left: 2.9em;
+    border-radius: 50% 50% 45% 42%;
+    transform: rotate(-45deg);
+    background-image:
+        radial-gradient(circle at 5.1em 2em, white 0.3em, transparent 0.3em),
+        radial-gradient(circle at 4.6em 2em, #333 0.7em, transparent 0.7em),
+        radial-gradient(circle at 4.5em 2em, white 1em, transparent 1em);
+    box-shadow: 1em -7.2em 0 -0.4em #333;
+}
+.panda::after {
+    content: '';
+    position: absolute;
+    width: 7em;
+    height: 4em;
+    background-color: #333;
+    top: 5.5em;
+    left: 11.1em;
+    border-radius: 50% 50% 42% 45%;
+    transform: rotate(45deg);
+    background-image:
+            radial-gradient(circle at 2.4em 1.5em, white 0.3em, transparent 0.3em),
+            radial-gradient(circle at 2.4em 2em, #333 0.7em, transparent 0.7em),
+            radial-gradient(circle at 2.5em 2em, white 1em, transparent 1em);
+    box-shadow: -1em -7.2em 0 -0.4em #333;
+}
+
+
+
+/* radar */
+.radar-box {
+    background-color: #6a6a6a;
+    height: 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radar {
+    width: calc(8em + 1.5em);
+    height: calc(8em + 1.5em);
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: black;
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 49.75%,
+            darkgreen 49.75%,
+            darkgreen 50.25%,
+            transparent 50.25%
+        ),
+        linear-gradient(
+            transparent 49.75%,
+            darkgreen 49.75%,
+            darkgreen 50.25%,
+            transparent 50.25%
+        ),
+        repeating-radial-gradient(
+            transparent 0,
+            transparent 0.95em,
+            darkgreen 0.95em,
+            darkgreen 1em,
+            transparent 1em
+        );
+    position: relative;
+}
+@keyframes scanning {
+    to {
+        transform: rotate(1turn);
+    }
+}
+.radar::before {
+    content: '';
+    position: absolute;
+    left: calc(1.5em/2);
+    top: calc(1.5em/2);
+    width: calc(8em/2);
+    height: calc(8em/2);
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 192, 0, 1) 100%
+    );
+    border-radius: 100% 0 0 0;
+    animation: scanning 5s linear infinite;
+    transform-origin: right bottom;
+}

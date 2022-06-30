@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../common/note.js"></script>
+    <script>new Note('3-12').render()</script>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.sky {
+			width: 100vw;
+			height: 100vh;
+			background-color: #555;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.moon {
+			width: 50vmin;
+			height: 50vmin;
+			border-radius: 50%;
+			background-color: gold;
+			box-shadow: 0 0 10vmin 1vmin white;
+		}
+	</style>
+</head>
+<body>
+	<div class="sky">
+		<div class="moon"></div>
+	</div>
+</body>
+</html>

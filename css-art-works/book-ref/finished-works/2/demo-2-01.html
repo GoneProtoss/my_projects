@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../common/note.js"></script>
+    <script>new Note('2-1').render()</script>
+	<style>
+		body {
+			display: flex;
+		}
+
+		.squares {
+			font-size: 10px;
+			width: 15em;
+			height: 15em;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.squares div {
+			position: absolute;
+			box-sizing: border-box;
+			border: 1em solid dimgray;
+		}
+
+		.squares div:nth-child(1) { width: 100%; height: 100%; }
+		.squares div:nth-child(2) { width: 70%; height: 70%; }
+		.squares div:nth-child(3) { width: 40%; height: 40%;}
+
+		.squares div::before,
+		.squares div::after {
+			content: '';
+			position: absolute;
+			width: 1em;
+			height: calc(50% + 1em);
+			background-color: gold;
+		}
+
+		.squares:nth-child(1) div::before,
+		.squares:nth-child(1) div::after {
+			display: none;
+		}
+
+		.squares:nth-child(2) div::before { top: 0; left: 0; }
+		.squares:nth-child(2) div::after { bottom: 0; right: 0; }
+
+		.squares:nth-child(3) div::before {top: -1em; left: -1em;}
+		.squares:nth-child(3) div::after {bottom: -1em;right: -1em;}
+	</style>
+</head>
+<body>
+	<figure class="squares">
+		<div></div>
+		<div></div>
+		<div></div>
+	</figure>
+
+	<figure class="squares">
+		<div></div>
+		<div></div>
+		<div></div>
+	</figure>
+
+	<figure class="squares">
+		<div></div>
+		<div></div>
+		<div></div>
+	</figure>
+</body>
+</html>

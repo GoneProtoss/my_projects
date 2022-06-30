@@ -1,0 +1,604 @@
+body {
+    background-color: #323232;
+}
+
+/* border-style-demo */
+.border-style-demo {
+    display: flex;
+    font-size: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.border-style {
+    border-width: 1vmin;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.border-style div {
+    width: 10em;
+    height: 10em;
+    line-height: 10em;
+    text-align: center;
+    margin: 2em 0 0 2em;
+    border-color: dodgerblue;
+}
+
+/* border color demo */
+.border-style .div1 {border-style: solid; color: orange;}
+.border-style .div2 {border-style: dashed; color: hotpink;}
+.border-style .div3 {border-style: dotted; color: dodgerblue;}
+
+/* each borders visibility demo */
+.border-style .div4 {
+    background-color: #ccc;
+    border-style: double;
+    border-width: 1em;
+    /* controlled by border-color */
+    border-color: currentColor transparent transparent transparent;
+}
+.border-style .div5 {
+    background-color: #ccc;
+    border-width: 1em;
+    /* controlled by border-style */
+    border-style: groove none none none;
+    border-color: currentColor;
+}
+.border-style .div6 {
+    background-color: #ccc;
+    /* controlled by border-width */
+    border-width: 1em 0 0 0;
+    border-style: ridge;
+    border-color: currentColor;
+}
+
+/* border radius demo */
+.border-style .div7 {border-style: inset; border-radius: 10%;}
+.border-style .div8 {border-style: outset; border-radius: 20%;}
+.border-style .div9 {border-style: solid; border-radius: 30%;}
+.border-style .div10 {border-style: solid; border-radius: 40%;}
+.border-style .div11 {border-style: solid; border-radius: 50%;}
+.border-style .div12 {border-style: solid; border-radius: 50%/10%;}
+.border-style .div13 {border-style: solid; border-radius: 50%/20%;}
+.border-style .div14 {border-style: solid; border-radius: 50%/30%;}
+.border-style .div15 {border-style: solid; border-radius: 50%/40%;}
+.border-style .div16 {border-style: solid; border-radius: 50%/50%;}
+
+.border-style .div17, .border-style .div18 {
+    width: 20em;
+    height: 10em;
+    border: 0.5em solid dodgerblue;
+}
+.border-style .div17 {border-top-left-radius: 50%;}
+.border-style .div18 {border-top-left-radius: 5em;}
+
+.border-style .div19, .border-style .div20 {
+    width: 10em;
+    height: 10em;
+    background-color: #ccc;
+    border: 0.5em solid dodgerblue;
+    outline: 0.5em solid orange;
+}
+.border-style .div20 {border-radius: 50%;}
+
+.border-style #div21 {
+    width: 0;
+    height: 0;
+    border: 5em solid;
+    margin-left: 3em;
+    border-color: transparent dodgerblue dodgerblue transparent;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    outline: 1px dashed white;
+}
+
+
+
+/* same-origin-square */
+.same-origin-square {
+    font-size: 10px;
+    height: 24em;
+    width: 80%;
+    margin: 3em auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.same-origin-square div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: darkblue;
+    border: 0.8em solid;
+    border-color: white rgba(100%, 100%, 100%, 0.2);
+}
+.same-origin-square .div1 {width: 18em; height: 18em;}
+.same-origin-square .div1 .div2 {width: 15em; height: 15em;}
+.same-origin-square .div1 .div2 .div3 {width: 12em; height: 12em;}
+.same-origin-square .div1 .div2 .div3 .div4 {width: 9em; height: 9em;}
+.same-origin-square .div1 .div2 .div3 .div4 .div5 {width: 6em; height: 6em;}
+
+
+
+/* same-origin-circle */
+.same-origin-circle {
+    font-size: 16px;
+    height: 20em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.same-origin-circle div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid lime;
+}
+.same-origin-circle .div1 {
+    flex:0 0 4em; height: 4em; background-color: lime;
+}
+.same-origin-circle .div1 .div2 {
+    flex:0 0 7em; height: 7em; border-width: 0.5em;
+}
+.same-origin-circle .div1 .div2 .div3 {
+    flex:0 0 10em; height: 10em; border-width: 0.3em; filter: opacity(0.6);
+}
+.same-origin-circle .div1 .div2 .div3 .div4 {
+    flex:0 0 13em; height: 13em; border-width: 0.1em; filter: opacity(0.3);
+}
+
+
+
+/* wifi */
+.wifi {
+    font-size: 16px;
+    height: 20em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wifi div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1em solid transparent;
+}
+
+.wifi .div1 {
+    width: 1.5em; height: 1.5em; background-color: dodgerblue;
+}
+.wifi .div1 .div2 {
+    flex:0 0 6em; height: 6em; border-top-color: red;
+}
+.wifi .div1 .div2 .div3 {
+    flex:0 0 10em; height: 10em; border-top-color: orange;
+}
+.wifi .div1 .div2 .div3 .div4 {
+    flex:0 0 14em; height: 14em; border-top-color: yellow;
+}
+
+
+
+/* sky moon */
+.sky {
+    font-size: 16px;
+    height: 16em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moon {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-color: gold;
+    box-shadow: 0 0 10vmin 1vmin white;
+}
+
+
+
+/* half circle */
+.half-circle {
+    font-size: 16px;
+    height: 10em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.half-circle div {
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    border: 3em solid;
+    margin: 0.5em;
+    outline: 1px dashed white;
+}
+.half-circle .div1 {
+    border-color: lightgreen deepskyblue transparent transparent;
+}
+.half-circle .div2 {
+    border-color: transparent deepskyblue mediumpurple transparent;
+}
+.half-circle .div3 {
+    border-color: transparent transparent mediumpurple coral;
+}
+.half-circle .div4 {
+    border-color: lightgreen transparent transparent coral;
+}
+.half-circle .div1.circle, .half-circle .div2.circle,
+.half-circle .div3.circle, .half-circle .div4.circle {
+    border-radius: 50%;
+}
+
+
+
+/* fox */
+.fox-box {
+    font-size: 16px;
+    height: 10em;
+    width: 80%;
+    margin: 4em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fox {
+    height: 0;
+    width: 0;
+    border: 6em solid #c25d26;
+    border-radius: 50%;
+    position: relative;
+    z-index: auto;
+}
+.fox .ears {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 3em solid;
+    border-radius: 50%;
+    top: -6em;
+    z-index: -1;
+}
+.fox .ears.left{
+    border-color: transparent #ed7233 #ed7233 transparent;
+    transform: rotate(-45deg);
+    right: 3em;
+}
+.fox .ears.right {
+    border-color: #ed7233 transparent transparent #ed7233;
+    transform: rotate(-45deg);
+    left: 3em;
+}
+
+.fox .eyes{
+    position: absolute;
+    border: 6em solid;
+    border-radius: 50%;
+    z-index: 1;
+}
+.fox .eyes.left{
+    border-color: white;
+    clip-path: ellipse(6em 6em at 100% 0%);
+    right: 0;
+}
+.fox .eyes.right{
+    border-color: white;
+    clip-path: ellipse(6em 6em at 0% 0%);
+    left: 0;
+}
+
+.eyes .eyeball {
+    content: '';
+    border: 0.5em solid;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    top: -3em;
+}
+.eyes.left .eyeball {
+    left: 2.2em;
+    border-color: black black transparent transparent;
+}
+.eyes.right .eyeball {
+    right: 2.2em;
+    border-color: black transparent transparent black;
+}
+.fox .nose{
+    position: absolute;
+    border: 1em solid;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: -7em;
+    left: -1em;
+}
+
+
+
+/* sector */
+.sector {
+    font-size: 10px;
+    height: 10em;
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sector div {
+    width: 8em;
+    height: 8em;
+    margin: 1em;
+    background-color: dodgerblue;
+}
+.sector .div1 {border-radius: 100% 0 0 0;}
+.sector .div2 {border-radius: 0 100% 0 0;}
+.sector .div3 {border-radius: 0 0 100% 0;}
+.sector .div4 {border-radius: 0 0 100% 0;}
+
+
+
+/* duck */
+.duck-box {
+    font-size: 10px;
+    height: 10em;
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.duck {
+    width: 10em;
+    height: 10em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.duck .div1 {
+    background-color: seagreen;
+    border-radius: 100% 0 0 0;
+}
+.duck .div2 {
+    background-color: seagreen;
+    border-radius: 0 100% 0 0;
+    background-image: radial-gradient(black 0.5em, transparent 0.5em);
+}
+.duck .div3 {
+    background-color: seagreen;
+    border-radius:0 0 100% 0;
+}
+.duck .div4 {
+    background-color: coral;
+    border-radius: 0 0 0 100%;
+}
+
+
+
+/* triangle */
+.triangle {
+    font-size: 10px;
+    height: 10em;
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.triangle div {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent dodgerblue transparent;
+}
+.triangle .div1 {
+    border-width: 5em;
+}
+.triangle .div2 {
+    border-width: 0 5em 10em 5em;
+}
+.triangle .div3 {
+    border-width: 0 5em calc(5em*1.732) 5em;
+}
+
+
+
+/* vue logo */
+.vue-logo {
+    font-size: 10px;
+    height: 10em;
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vue-logo div {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: currentColor transparent transparent transparent;
+    border-width: 20em 12.5em 0 12.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.vue-logo .div1 {
+    color: #42b883;
+}
+.vue-logo .div1 .div2 {
+    color: #35495e;
+    transform-origin: top;
+    transform: scale(0.65);
+}
+.vue-logo .div1 .div2 .div3 {
+    color: white;
+    transform-origin: top;
+    transform: scale(calc(0.65*0.5));
+}
+
+
+
+/* pencil */
+.pencil-box {
+    font-size: 16px;
+    height: 10em;
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    border-radius: 1em;
+}
+.pencil {
+    display: flex;
+    width: 50em;
+    height: 3.5em;
+    font-weight: bold;
+    margin: 10em auto;
+    filter: drop-shadow(0.4em 0.8em 0.3em gray);
+}
+.taper {
+    width: 4em;
+    /* background-color: burlywood; */
+}
+.barrel {
+    width: 40em;
+    background-color: green;
+}
+.eraser {
+    position: relative;
+    width: 6em;
+    background-color: lightpink;
+}
+.taper::before,
+.taper::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: calc(3.5em/2) 4em calc(3.5em/2) 0;
+    border-color: transparent;
+}
+.taper::before {
+    border-right-color: burlywood;
+}
+.taper::after {
+    border-right-color: black;
+    transform-origin: left;
+    transform: scale(0.3);
+}
+.barrel {
+    border-top: 1em solid forestgreen;
+    border-bottom: 1em solid darkgreen;
+    color: silver;
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.eraser {
+    border-top: 1em solid pink;
+    border-bottom: 1em solid lightcoral;
+    border-radius: 0 0.5em 0.5em 0;
+}
+.eraser::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: silver;
+    border-top: 1em solid lightgray;
+    border-bottom: 1em solid gray;
+    top: -1em;
+}
+
+
+
+/* spacecraft */
+.spacecraft {
+    font-size: 16px;
+    margin: 4em auto;
+    width: 11em;
+    height: 15em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body {
+    position: absolute;
+    width: 7em;
+    height: 11em;
+    background: linear-gradient(whitesmoke, darkgray);
+    border-radius: 50%/70% 70% 5% 5%;
+    z-index: 1;
+}
+.body::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 4em;
+    height: 4em;
+    background-color: deepskyblue;
+    border-radius: 50%;
+    border: 0.5em solid lightslategray;
+    top: 3em;
+    left: 1.5em;
+    box-shadow: inset -0.2em 0.2em white;
+}
+.engine {
+    position: absolute;
+    width: 6em;
+    height: 2em;
+    background-color: #555;
+    border-radius: 20%;
+    top: 12em;
+    left: 2.5em;
+}
+.engine::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 4em;
+    height: 4em;
+    background: gold;
+    border-radius: 80% 0 50% 45%/50% 0 80% 45%;
+    transform: rotate(135deg);
+    border: 0.5em solid orange;
+    left: 1em;
+    z-index: -1;
+}
+.fins::before,
+.fins::after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 6em;
+    background: linear-gradient(tomato, darkred);
+    top: 7em;
+}
+.fins::before {
+    left: 0.3em;
+    border-radius: 3em 0 50% 100%;
+}
+.fins::after {
+    right: 0.3em;
+    border-radius: 0 3em 100% 50%;
+}

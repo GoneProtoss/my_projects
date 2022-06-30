@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-19').render()</script>
+    <style>
+        body {
+            display: flex;
+        }
+        
+        div.container {
+            font-size: 16px;
+            width: 10em;
+            height: 10em;
+            background-color: skyblue;
+            display: flex;
+            margin: 2em;
+            background-image: linear-gradient(
+                transparent 50%,
+                darkgreen calc(50% + 1px),
+                transparent calc(50% + 1px)
+            ),linear-gradient(
+                to right,
+                transparent 50%,
+                darkgreen calc(50% + 1px),
+                transparent calc(50% + 1px)
+            );
+            background-size: 10em, 10em;
+        }
+
+        div.container span {
+            width: 7em;
+            height: 7em;
+            background-color: hsl(0, 100%, 72%, 0.8);
+            border-radius: 50%;
+        }
+
+        div.container:nth-child(1) { align-items: center; }
+        div.container:nth-child(2) { justify-content: center; }
+        div.container:nth-child(3) {
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+    </div>
+
+    <div class="container">
+        <span></span>
+    </div>
+
+    <div class="container">
+        <span></span>
+    </div>
+</body>
+</html>

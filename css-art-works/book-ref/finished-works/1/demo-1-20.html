@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-20').render()</script>
+    <style>
+        div.container {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            width: 35em;
+            height: 7em;
+            background-color: lightblue;
+            margin: 2em;
+        }
+
+        div.container span {
+            width: 5em;
+            height: 5em;
+            background-color: darkcyan;
+            border-radius: 50%;
+        }
+
+        div.container:nth-child(1) { justify-content: flex-start; }
+        div.container:nth-child(2) { justify-content: flex-end; }
+        div.container:nth-child(3) { justify-content: space-between; }
+        div.container:nth-child(4) { justify-content: space-around; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
