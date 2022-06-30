@@ -1,6 +1,6 @@
 const game_2048 = (selector) => {
   const game_container  = document.querySelector(selector);
-  const game_board_type = 5; // Must always lt 10!
+  const game_board_type = 4; // Must always lt 10!
   const game_state = [];
 
   game_container.classList.add("game_2048");

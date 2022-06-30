@@ -19,6 +19,7 @@
   border-radius: 8px;
   background-color: lightgoldenrodyellow;
   margin: 4px;
+  transition: all .2s ease;
 }
 
 .game_2048 .cell_0 {color: gray; font-size: 3em;}
